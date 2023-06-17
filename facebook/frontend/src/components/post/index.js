@@ -238,7 +238,7 @@ export default function Post({ post, user, profile }) {
         </div>
         <div className="post_action hover1">
           <i className="comment_icon"></i>
-          <span>Comment</span>
+          <span>Query</span>
         </div>
         <div className="post_action hover1">
           <i className="share_icon"></i>

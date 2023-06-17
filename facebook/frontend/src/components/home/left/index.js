@@ -15,7 +15,7 @@ export default function LeftHome({ user }) {
           {user?.first_name} {user.last_name}
         </span>
       </Link>
-      {left.slice(0, 8).map((link, i) => (
+      {/* {left.slice(0, 8).map((link, i) => (
         <LeftLink
           key={i}
           img={link.img}
@@ -59,20 +59,20 @@ export default function LeftHome({ user }) {
           </div>
         </div>
       )}
-      <div className="splitter"></div>
+      <div className="splitter"></div> */}
       <div className="shortcut">
         <div className="heading">Your Shortcuts</div>
         <div className="edit_shortcut">Edit</div>
       </div>
       <div className="shortcut_list">
         <Shortcut
-          link="https://www.youtube.com/c/MohamedHaJJi1/featured"
+          link="https://www.youtube.com/@TechTravelAndLifestyle/videos"
           img="../../images/ytb.png"
           name="My Youtube channel"
         />
 
         <Shortcut
-          link="https://www.instagram.com/med_hajji7/"
+          link="https://www.instagram.com/sanjaykashyap8077/"
           img="../../images/insta.png"
           name="My Instagram "
         />

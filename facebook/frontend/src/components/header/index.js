@@ -13,7 +13,10 @@ import {
   Messenger,
   Notifications,
   Search,
+  SearchRide,
   Watch,
+  PostRide
+
 } from "../../svg";
 import { useSelector } from "react-redux";
 import SearchMenu from "./SearchMenu";
@@ -53,7 +56,7 @@ export default function Header({ page, getAllPosts }) {
           <Search color={color} />
           <input
             type="text"
-            placeholder="Search Facebook"
+            placeholder="Search Locals"
             className="hide_input"
           />
         </div>
@@ -79,16 +82,16 @@ export default function Header({ page, getAllPosts }) {
         >
           {page === "friends" ? <FriendsActive /> : <Friends color={color} />}
         </Link>
-        <Link to="/" className="middle_icon hover1">
-          <Watch color={color} />
+        <Link to="/postRide" className="middle_icon hover1">
+          <PostRide color={color} />
           <div className="middle_notification">9+</div>
         </Link>
-        <Link to="/" className="middle_icon hover1">
-          <Market color={color} />
+        <Link to="/searchRide" className="middle_icon hover1">
+          <SearchRide color={color} />
         </Link>
-        <Link to="/" className="middle_icon hover1 ">
+        {/* <Link to="/" className="middle_icon hover1 ">
           <Gaming color={color} />
-        </Link>
+        </Link> */}
       </div>
       <div className="header_right">
         <Link
@@ -100,7 +103,7 @@ export default function Header({ page, getAllPosts }) {
           <img src={user?.picture} alt="" />
           <span>{user?.first_name}</span>
         </Link>
-        <div
+        {/* <div
           className={`circle_icon hover1 ${showAllMenu && "active_header"}`}
           ref={allmenu}
         >
@@ -115,7 +118,7 @@ export default function Header({ page, getAllPosts }) {
           </div>
 
           {showAllMenu && <AllMenu />}
-        </div>
+        </div> */}
         <div className="circle_icon hover1">
           <Messenger />
         </div>

@@ -120,6 +120,7 @@ exports.activateAccount = async (req, res) => {
 };
 exports.login = async (req, res) => {
   try {
+    console.log("try");
     const { email, password } = req.body;
     const user = await User.findOne({ email });
     if (!user) {

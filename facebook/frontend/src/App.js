@@ -8,6 +8,10 @@ import { useSelector } from "react-redux";
 import Activate from "./pages/home/activate";
 import Reset from "./pages/reset";
 import CreatePostPopup from "./components/createPostPopup";
+import SearchRides from "./components/rides/SerchRides";
+import RideList from "./components/rides/RideList";
+import RidePosted from "./components/rides/RidePosted"
+import PostRide from "./components/rides/PostRide";
 import { useEffect, useReducer, useState } from "react";
 import axios from "axios";
 import { postsReducer } from "./functions/reducers";
@@ -97,6 +101,20 @@ function App() {
                 loading={loading}
                 getAllPosts={getAllPosts}
               />
+            }
+            exact
+          />
+          <Route
+            path="/searchRide"
+            element={
+              <SearchRides />
+            }
+            exact
+          />
+          <Route
+            path="/postRide"
+            element={
+              <PostRide />
             }
             exact
           />
